@@ -26,7 +26,7 @@ class App extends Component{
     getNewsFeed(){
         const query = Translate(this.state.searchKey);
         if(query){
-            const URL = `http://newsapi.org/v2/top-headlines?country=${query}&apiKey=${process.env.REACT_APP_API_KEY}`;
+            const URL = `https://newsapi.org/v2/top-headlines?country=${query}&apiKey=${process.env.REACT_APP_API_KEY}`;
             const req = new Request(URL);
             fetch(req)
             .then(response => response.json())
